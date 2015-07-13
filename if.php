@@ -29,9 +29,6 @@
  } else if ($b == $c) {
      // output the appropriate result
      echo "$b is equal to $c\n";
- } else if ($b == $c && $b !== $c) {
-     // output the appropriate result
-     echo "$b is not identical to $c\n";
  } else {
      // output the appropriate result
      echo "$b is not equal to $c\n";
