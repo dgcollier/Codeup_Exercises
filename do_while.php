@@ -1,5 +1,6 @@
 <?php
 // ITEM ONE
+
 // $a = 0;
 
 // do {
@@ -8,6 +9,7 @@
 // } while ($a <= 100);
 
 // ITEM TWO
+
 // $a = 100;
 
 // do {
