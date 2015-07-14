@@ -4,7 +4,7 @@ $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, 
 
 /* STEP ONE: Construct a loop that iterates through each value and outputs its type as either 
 integer, float, boolean, array, null, or string. */
-
+echo 'STEP ONE:' .PHP_EOL;
 foreach ($things as $type) {
     if (is_int($type)) {
         echo "{$type} is an integer.\n";
@@ -17,7 +17,7 @@ foreach ($things as $type) {
             echo "'False' is a boolean value.\n";
         }   
     } else if (is_array($type)) {
-        echo "Array ({$type[0]}, {$type[1]}, and {$type[2]})\n";
+        echo "Array ({$type[0]},{$type[1]},{$type[2]})\n";
     } else if (is_null($type)) {
         $newType = intval($type);
         echo "{$newType} is a null value.\n";
@@ -28,7 +28,8 @@ foreach ($things as $type) {
 
 /* STEP TWO: Construct a loop that iterates through each value and outputs only values with a 
 type that is scalar. */
-
+echo ' ' . PHP_EOL;
+echo 'STEP TWO:' .PHP_EOL;
 foreach ($things as $type) {   
     if (is_scalar($type)) {
         if (is_bool($type)) {
@@ -44,6 +45,14 @@ foreach ($things as $type) {
 }
 
 /* STEP THREE: Create a loop that will echo out every value, including those nested in arrays. */
-
+echo ' ' . PHP_EOL;
+echo 'STEP THREE:' .PHP_EOL;
+foreach ($things as $type) {
+    if (is_array($type)) {
+        echo "Array ({$type[0]}, {$type[1]}, and {$type[2]})\n";
+    } else {
+        echo "{$type}\n";
+    }
+}
 
 ?>
