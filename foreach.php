@@ -12,15 +12,14 @@ foreach ($things as $type) {
         echo "{$type} is a float.\n";
     } else if (is_bool($type)) {
         if (intval($type)) {
-            echo "'True' is a boolean value.\n";
+            echo "True is a boolean value.\n";
         } else {
-            echo "'False' is a boolean value.\n";
+            echo "False is a boolean value.\n";
         }   
     } else if (is_array($type)) {
         echo "Array ({$type[0]}, {$type[1]}, {$type[2]})\n";
     } else if (is_null($type)) {
-        $newType = intval($type);
-        echo "{$newType} is a null value.\n";
+        echo "Null value.\n";
     } else if (is_string($type)) {
         echo "{$type} is a string.\n";
     }
@@ -33,9 +32,9 @@ foreach ($things as $type) {
     if (is_scalar($type)) {
         if (is_bool($type)) {
             if (intval($type)) {
-                echo "'True' is scalar.\n";
+                echo "True is scalar.\n";
             } else {
-                echo "'False' is scalar.\n";
+                echo "False is scalar.\n";
             }      
         } else {
             echo "{$type} is scalar.\n";
