@@ -17,7 +17,7 @@ foreach ($things as $type) {
             echo "'False' is a boolean value.\n";
         }   
     } else if (is_array($type)) {
-        echo "Array ({$type[0]},{$type[1]},{$type[2]})\n";
+        echo "Array ({$type[0]}, {$type[1]}, {$type[2]})\n";
     } else if (is_null($type)) {
         $newType = intval($type);
         echo "{$newType} is a null value.\n";
@@ -49,7 +49,7 @@ echo ' ' . PHP_EOL;
 echo 'STEP THREE:' .PHP_EOL;
 foreach ($things as $type) {
     if (is_array($type)) {
-        echo "Array ({$type[0]}, {$type[1]}, and {$type[2]})\n";
+        echo "Array ({$type[0]}, {$type[1]}, {$type[2]})\n";
     } else {
         echo "{$type}\n";
     }
