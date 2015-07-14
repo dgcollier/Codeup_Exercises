@@ -1,20 +1,14 @@
 <?php
 
-fwrite(STDOUT, 'Enter start number:' . PHP_EOL);
-$startNum = trim(fgets(STDIN));
-
 do { 
-    fwrite(STDOUT, 'Enter a NUMBER:' . PHP_EOL);
+    fwrite(STDOUT, 'Enter a start number:' . PHP_EOL);
     $startNum = trim(fgets(STDIN)); 
-} while (!is_numeric($startNum));
-
-fwrite(STDOUT, 'Enter end number:' . PHP_EOL);
-$endNum = trim(fgets(STDIN));
+} while (!(is_numeric($startNum)));
 
 do {
-    fwrite(STDOUT, 'Enter a NUMBER:' . PHP_EOL);
+    fwrite(STDOUT, 'Enter a LARGER end number:' . PHP_EOL);
     $endNum = trim(fgets(STDIN)); 
-} while (!is_numeric($endNum));
+} while (!(is_numeric($endNum)) || $endNum <= $startNum);
 
 fwrite(STDOUT, 'Enter an number to increment by:' . PHP_EOL);
 $increment = intval(fgets(STDIN));
