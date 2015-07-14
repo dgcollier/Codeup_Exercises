@@ -7,21 +7,17 @@ integer, float, boolean, array, null, or string. */
 echo ' ' . PHP_EOL . 'STEP ONE:' .PHP_EOL;
 foreach ($things as $type) {
     if (is_int($type)) {
-        echo "{$type} is an integer.\n";
+        echo "Integer.\n";
     } else if (is_float($type)) {
-        echo "{$type} is a float.\n";
+        echo "Float.\n";
     } else if (is_bool($type)) {
-        if (intval($type)) {
-            echo "True is a boolean value.\n";
-        } else {
-            echo "False is a boolean value.\n";
-        }   
+        echo "Boolean.\n";
     } else if (is_array($type)) {
-        echo "Array ({$type[0]}, {$type[1]}, {$type[2]})\n";
+        echo "Array.\n";
     } else if (is_null($type)) {
-        echo "Null value.\n";
+        echo "Null.\n";
     } else if (is_string($type)) {
-        echo "{$type} is a string.\n";
+        echo "String.\n";
     }
 }
 
