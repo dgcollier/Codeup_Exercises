@@ -12,8 +12,11 @@ for ($i = 1; $i < 100; $i++) {
 
 // Create a for loop that counts from 1 to 100 but stops after 10 using break.
 
-// for () {
-
-// }
+for ($j = 1; $j < 100; $j++) {
+    echo $j . PHP_EOL;
+    if ($j == 10) {
+        break;
+    }
+}
 
 ?>
