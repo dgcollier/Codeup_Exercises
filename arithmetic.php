@@ -1,13 +1,13 @@
 <?php
 
-$a = 3;
+$a = 'hi';
 $b = 0;
 
 function add($a, $b) {
     if (is_numeric($a) && is_numeric($b)) {
         return $a + $b . PHP_EOL;
     } else {
-        return 'ERROR: Both arguments must be numbers' . PHP_EOL;
+        return "ERROR: Both arguments must be numbers. You tried to pass '{$a}' and '{$b}'." . PHP_EOL;
     }
 }
 
@@ -15,7 +15,7 @@ function subtract($a, $b) {
     if (is_numeric($a) && is_numeric($b)) {
         return $a - $b . PHP_EOL;
     } else {
-        return 'ERROR: Both arguments must be numbers' . PHP_EOL;
+        return "ERROR: Both arguments must be numbers. You tried to pass '{$a}' and '{$b}'." . PHP_EOL;
     }
 }
 
@@ -23,31 +23,31 @@ function multiply($a, $b) {
     if (is_numeric($a) && is_numeric($b)) {
         return $a * $b . PHP_EOL;
     } else {
-        return 'ERROR: Both arguments must be numbers' . PHP_EOL;
+        return "ERROR: Both arguments must be numbers. You tried to pass '{$a}' and '{$b}'." . PHP_EOL;
     }
 }
 
 function divide($a, $b) {
     if (is_numeric($a) && is_numeric($b)) {
         if ($b == 0) {
-            echo 'ERROR: Cannot divide by zero' . PHP_EOL;
+            echo 'ERROR: Cannot divide by 0!' . PHP_EOL;
         } else {
             return $a / $b . PHP_EOL;
         }
     } else {
-        return 'ERROR: Both arguments must be numbers' . PHP_EOL;
+        return "ERROR: Both arguments must be numbers. You tried to pass '{$a}' and '{$b}'." . PHP_EOL;
     }
 }
 
 function modulus($a, $b) {
     if (is_numeric($a) && is_numeric($b)) {
         if ($b == 0) {
-            echo 'ERROR: Cannot divide by zero' . PHP_EOL;
+            echo 'ERROR: Cannot divide by 0!' . PHP_EOL;
         } else {
             return $a % $b . PHP_EOL;
         }
     } else {
-        return 'ERROR: Both arguments must be numbers' . PHP_EOL;
+        return "ERROR: Both arguments must be numbers. You tried to pass '{$a}' and '{$b}'." . PHP_EOL;
     }
 }
 
