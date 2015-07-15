@@ -2,29 +2,32 @@
 
 function add($a, $b)
 {
-    echo $a + $b . PHP_EOL;
+    return $a + $b . PHP_EOL;
 }
 
 function subtract($a, $b)
 {
-    // Add code here
-    echo $a - $b . PHP_EOL;
+    return $a - $b . PHP_EOL;
 }
 
 function multiply($a, $b)
 {
-    // Add code here
-    echo $a * $b . PHP_EOL;
+    return $a * $b . PHP_EOL;
 }
 
 function divide($a, $b)
 {
-    // Add code here
-    echo $a / $b . PHP_EOL;
+    return $a / $b . PHP_EOL;
+}
+
+function modulus($a, $b)
+{
+    return $a % $b . PHP_EOL;
 }
 
 // Add code to test your functions here
-add(5, 10);
-subtract(10, 5);
-multiply(10, 5);
-divide(10, 5);
+echo add(5, 10);
+echo subtract(10, 5);
+echo multiply(10, 5);
+echo divide(10, 5);
+echo modulus(10, 2);
