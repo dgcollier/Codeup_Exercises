@@ -1,6 +1,9 @@
 <?php  
 
 // Create a for loop that shows all even numbers between 1 and 100 using continue.
+
+echo 'STEP ONE:' . PHP_EOL;
+
 for ($i = 1; $i < 100; $i++) {
     if ($i % 2 != 0) {
         continue;
@@ -11,6 +14,8 @@ for ($i = 1; $i < 100; $i++) {
 
 
 // Create a for loop that counts from 1 to 100 but stops after 10 using break.
+
+echo PHP_EOL . 'STEP TWO:' . PHP_EOL;
 
 for ($j = 1; $j < 100; $j++) {
     echo $j . PHP_EOL;
