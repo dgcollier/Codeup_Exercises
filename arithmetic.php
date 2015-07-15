@@ -29,7 +29,11 @@ function multiply($a, $b) {
 
 function divide($a, $b) {
     if (is_numeric($a) && is_numeric($b)) {
-        return $a / $b . PHP_EOL;
+        if ($b == 0) {
+            echo 'ERROR: Cannot divide by zero' . PHP_EOL;
+        } else {
+            return $a / $b . PHP_EOL;
+        }
     } else {
         return 'ERROR: Both arguments must be numbers' . PHP_EOL;
     }
@@ -37,7 +41,11 @@ function divide($a, $b) {
 
 function modulus($a, $b) {
     if (is_numeric($a) && is_numeric($b)) {
-        return $a % $b . PHP_EOL;
+        if ($b == 0) {
+            echo 'ERROR: Cannot divide by zero' . PHP_EOL;
+        } else {
+            return $a % $b . PHP_EOL;
+        }
     } else {
         return 'ERROR: Both arguments must be numbers' . PHP_EOL;
     }
