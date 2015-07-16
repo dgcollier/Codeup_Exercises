@@ -3,9 +3,6 @@
 // TODO: Create your inspect() function here
 
 function inspect ($a) {
-    // if (is_int($a)) {
-    //     return "The integer is $a." . PHP_EOL;
-    // }
 
     switch (gettype($a)) {
         case 'integer':
@@ -36,7 +33,7 @@ function inspect ($a) {
             return 'The value is NULL.' . PHP_EOL;
             break;
         default:
-            return 'ERROR';
+            return 'ERROR' . PHP_EOL;
     }
 }
 
@@ -54,48 +51,46 @@ $num4 = 14.4;
 $null = NULL;
 
 // TODO: After each echo statement, use inspect() to output the variable's type and its value
-
 echo 'Inspecting $num1:' . PHP_EOL;
-sleep(2);
+sleep(1);
 echo inspect(intval($num1)) . PHP_EOL;
 sleep(1);
 echo 'Inspecting $num2:' . PHP_EOL;
-sleep(2);
-echo inspect($num2) . PHP_EOL;
+sleep(1);
+echo inspect(floatval($num2)) . PHP_EOL;
 sleep(1);
 echo 'Inspecting $num3:' . PHP_EOL;
-sleep(2);
+sleep(1);
 echo inspect($num3) . PHP_EOL;
 sleep(1);
 echo 'Inspecting $num4:' . PHP_EOL;
-sleep(2);
+sleep(1);
 echo inspect($num4) . PHP_EOL;
 sleep(1);
 echo 'Inspecting $null:' . PHP_EOL;
-sleep(2);
+sleep(1);
 echo inspect($null) . PHP_EOL;
 sleep(1);
 echo 'Inspecting $bool1' . PHP_EOL;
-sleep(2);
+sleep(1);
 echo inspect($bool1) . PHP_EOL;
 sleep(1);
 echo 'Inspecting $bool2' . PHP_EOL;
-sleep(2);
+sleep(1);
 echo inspect($bool2) . PHP_EOL;
 sleep(1);
 echo 'Inspecting $string1' . PHP_EOL;
-sleep(2);
+sleep(1);
 echo inspect($string1) . PHP_EOL;
 sleep(1);
 echo 'Inspecting $string2' . PHP_EOL;
-sleep(2);
+sleep(1);
 echo inspect($string2) . PHP_EOL;
 sleep(1);
 echo 'Inspecting $array1' . PHP_EOL;
-sleep(2);
+sleep(1);
 echo inspect($array1) . PHP_EOL;
 sleep(1);
 echo 'Inspecting $array2' . PHP_EOL;
-sleep(2);
-echo inspect($array2) . PHP_EOL;
 sleep(1);
+echo inspect($array2) . PHP_EOL;
