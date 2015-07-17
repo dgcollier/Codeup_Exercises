@@ -28,21 +28,6 @@ function parseContacts($filename)
 
     $contacts = $new_contacts;
 
-    // foreach ($contacts as $contact) {
-    //     foreach ($contact as $key => $value) {
-
-    //         $i = intval($key);
-    //         if ($i % 2 == 0) {
-    //             $key = ["name"];
-    //             // var_dump($contacts);
-    //             unset($key);
-    //         } else {
-    //             $key = ["number"];
-    //             unset($key); 
-    //         }
-    //     }
-    // }
-
     return $contacts;
 }
 
