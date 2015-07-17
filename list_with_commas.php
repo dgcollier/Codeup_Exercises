@@ -4,6 +4,7 @@
 
 function humanizedList($array) {
 // Your solution goes here!
+    sort($array);
     $arrayPop = array_pop($array);
     array_push($array, "and $arrayPop");
 
