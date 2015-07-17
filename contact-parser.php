@@ -5,7 +5,7 @@ function parseContacts($filename)
     $new_contacts = [];
 
     $handle = fopen($filename, 'r');
-    $contacts = fread($handle, filesize($filename));
+    $contacts = trim(fread($handle, filesize($filename)));
     fclose($handle);
 
     $contacts = explode(PHP_EOL, $contacts);
@@ -22,7 +22,6 @@ function parseContacts($filename)
     }
 
     return $new_contacts;
-
 }
 
 function format_number ($number)
