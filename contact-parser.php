@@ -19,7 +19,7 @@ function parseContacts($filename)
         $new_contacts[$key] = array("name" => $value[0], "number" => $number);
     }
 
-    return = $new_contacts;
+    return $new_contacts;
 
 }
 
