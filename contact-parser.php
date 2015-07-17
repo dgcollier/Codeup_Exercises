@@ -2,7 +2,6 @@
 
 function parseContacts($filename)
 {
-    $contacts = array();
     $new_contacts = [];
 
     // todo - read file and parse contacts
