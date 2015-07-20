@@ -4,7 +4,8 @@ $names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam'];
 
 $compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael'];
 
-function combineArrays($array1, $array2) {
+function combineArrays($array1, $array2) 
+{
     $combined = [];
 
     foreach ($array1 as $key => $value) {

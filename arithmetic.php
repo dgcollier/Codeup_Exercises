@@ -3,7 +3,8 @@
 $a = 10;
 $b = 2;
 
-function checkArguments($a, $b, $dividing = false) {
+function checkArguments($a, $b, $dividing = false) 
+{
     if (is_numeric($a) && is_numeric($b)) {
         if ($dividing && $b == 0) {
             echo 'ERROR: Cannot divide by 0!' . PHP_EOL;
@@ -15,31 +16,36 @@ function checkArguments($a, $b, $dividing = false) {
     }
 }
 
-function add($a, $b) {
+function add($a, $b) 
+{
     if (checkArguments($a, $b)) {
         return $a + $b . PHP_EOL;
     }
 }
 
-function subtract($a, $b) {
+function subtract($a, $b) 
+{
     if (checkArguments($a, $b)) {
         return $a - $b . PHP_EOL;
     }
 }
 
-function multiply($a, $b) {
+function multiply($a, $b) 
+{
     if (checkArguments($a, $b)) {
         return $a * $b . PHP_EOL;
     }
 }
 
-function divide($a, $b) {
+function divide($a, $b) 
+{
     if (checkArguments($a, $b, true)) {
             return $a / $b . PHP_EOL;
     }
 }
 
-function modulus($a, $b) {
+function modulus($a, $b) 
+{
     if (checkArguments($a, $b, true)) {
             return $a % $b . PHP_EOL;
     }

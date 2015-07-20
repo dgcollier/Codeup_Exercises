@@ -7,9 +7,8 @@ if ($argc > 1) {
     $sort_var = intval($argv[1]);
 }
 
-function humanizedList($array, $sort_it) {
-// Your solution goes here!
-
+function humanizedList($array, $sort_it) 
+{
     if ($sort_it > 0) {
         sort($array);
     }

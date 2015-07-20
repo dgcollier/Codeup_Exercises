@@ -2,8 +2,8 @@
 
 // TODO: Create your inspect() function here
 
-function inspect ($a) {
-
+function inspect ($a) 
+{
     switch (gettype($a)) {
         case 'integer':
             return "The integer is $a." . PHP_EOL;

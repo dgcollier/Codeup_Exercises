@@ -4,7 +4,8 @@ $names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam', 'David', 'Ryan'];
 
 $compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael', 'David', 'Ryan'];
 
-function searchArray ($query, $array) {
+function searchArray ($query, $array) 
+{
 
     $result = array_search($query, $array);
 
@@ -15,7 +16,8 @@ function searchArray ($query, $array) {
             }
 }
 
-function compareArrays ($queries, $comparison) {
+function compareArrays ($queries, $comparison) 
+{
     $count = 0;
     foreach ($queries as $query) {
         $result = array_search($query, $comparison);
