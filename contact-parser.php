@@ -29,6 +29,22 @@ function format_number ($number)
     return substr($number, 0, 3) . '-' . substr($number, 3, 3) . '-' . substr($number, 6, 4);
 }
 
+function addContact ($newContact)
+{
+    $handle = fopen('contacts.txt', 'a');
+    fwrite($handle, $newContact);
+    fclose($handle);
+    return "Contact added" . PHP_EOL;
+}
+
+function compileContact ($name, $number)
+{
+    $newContact = "$name|$number" . PHP_EOL;
+    addContact($newContact);
+    return "Contact compiled." . PHP_EOL;
+}
+
+compileContact("Alex Karamol", "6144036596");
 print_r(parseContacts('contacts.txt'));
 
 ?>
