@@ -15,15 +15,15 @@ function logMessage($logLevel, $message)
     return print_r("Messaged logged." . PHP_EOL);
 }
 
-function logInfo ($infoMessage) 
+function logInfo ($message) 
 {
-    logMessage("INFO", $infoMessage);
+    logMessage("INFO", $message);
 }
 
-function logError ($errorMessage) 
+function logError ($message) 
 {
-    logMessage("ERROR", $errorMessage);
+    logMessage("ERROR", $message);
 }
 
-logInfo("Today is Monday.");
-logError("Why Monday.");
+logInfo("This is the info message.");
+logError("This is the error message.");

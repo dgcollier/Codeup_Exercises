@@ -34,14 +34,14 @@ function addContact ($newContact)
     $handle = fopen('contacts.txt', 'a');
     fwrite($handle, $newContact);
     fclose($handle);
-    return "Contact added" . PHP_EOL;
+    return print_r("Contact added" . PHP_EOL);
 }
 
 function compileContact ($name, $number)
 {
     $newContact = "$name|$number" . PHP_EOL;
     addContact($newContact);
-    return "Contact compiled." . PHP_EOL;
+    return print_r("Contact compiled." . PHP_EOL);
 }
 
 compileContact("Alex Karamol", "6144036596");
