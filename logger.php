@@ -6,7 +6,7 @@ function logMessage($logLevel, $message)
     date_default_timezone_set('America/Chicago');
     $date = date('Y-m-d');
     $time = date('h:i:s');
-    $handle = fopen('txt/log' . $date . '.txt', 'a');
+    $handle = fopen('txt/log-' . $date . '.txt', 'a');
     $logLevel = strtoupper($logLevel);
     $message = strtoupper($message);
     fwrite($handle, "$date $time [$logLevel] $message" . PHP_EOL);
@@ -25,4 +25,4 @@ function logError ($errorMessage)
 }
 
 logInfo("Today is Monday.");
-logError("That is also the error message.");
+logError("Why Monday.");
