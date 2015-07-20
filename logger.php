@@ -5,7 +5,7 @@ function logMessage($logLevel, $message)
     // todo - complete this function
     date_default_timezone_set('America/Chicago');
     $date = date('Y-m-d');
-    $time = date('h:i:s');
+    $time = date('H:i:s');
     $handle = fopen('txt/log-' . $date . '.txt', 'a');
     $logLevel = strtoupper($logLevel);
     $message = strtoupper($message);
