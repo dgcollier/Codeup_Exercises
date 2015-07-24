@@ -2,11 +2,9 @@
 
 require_once 'Log.php';
 
-$date = date('Y-m-d');
+// $date = date('Y-m-d');
 
-$log1 = new Log();
+$log1 = new Log('cli');
 
-$log1->filename = 'txt/log-' . $date . '.txt';
-
-$log1->logInfo('this is log two.');
+$log1->logInfo('Testing construct/destruct methods');
 
