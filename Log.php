@@ -3,6 +3,7 @@
 class Log
 {
     public $filename;
+    public $handle;
 
     function logMessage($logLevel, $message)
     {
