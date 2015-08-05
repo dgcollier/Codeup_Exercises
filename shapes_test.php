@@ -3,23 +3,26 @@
 require_once "rectangle.php";
 require_once "square.php";
 
-$shape = new Rectangle(5,10);
-$shape->area();
+$rectangle = new Rectangle(5,10);
+$rectangle->area();
+$rectangle->perimeter();
 
-$shape = new Rectangle(20,2);
-$shape->area();
+$rectangle = new Rectangle(20,2);
+$rectangle->area();
+$rectangle->perimeter();
 
-$shape = new Rectangle(3,57);
-$shape->area();
+$rectangle = new Rectangle(3,57);
+$rectangle->area();
+$rectangle->perimeter();
 
-$square = new Square(4,4);
+$square = new Square(4);
 $square->area();
 $square->perimeter();
 
-$square = new Square(5,5);
+$square = new Square(5);
 $square->area();
 $square->perimeter();
 
-$square = new Square(6,6);
+$square = new Square(6);
 $square->area();
 $square->perimeter();

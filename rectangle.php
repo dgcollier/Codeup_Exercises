@@ -13,6 +13,11 @@
 
     public function area()
     {
-        return print_r($this->height * $this->width . PHP_EOL);
+        return print_r('Area is: ' . $this->height * $this->width . PHP_EOL);
+    }
+
+    public function perimeter()
+    {
+        return print_r('Perimeter is: ' . (($this->height * 2) + ($this->width * 2)) . PHP_EOL);
     }
 }
