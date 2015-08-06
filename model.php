@@ -3,49 +3,81 @@
 class Model
 {
 
+    protected static $dbc;
+    protected static $table;
+
     public $attributes = array();
 
-    public function __set ($key, $value)
+    public function __construct()
     {
-        $this->attributes[$key] = $value;
+        self::dbConnect();
     }
-    
-    public function __get ($key)
+
+    protected static function dbConnect()
     {
-        if (array_key_exists($key, $this->attributes)) {
-            return $this->attributes[$key];
+        if (!self::$dbc)
+        {
+            define("DB_HOST", '127.0.0.1');
+            define("DB_NAME", 'user_db');
+            define("DB_USER", 'some_user');
+            define("DB_PASS", '');
+            
+            self::$dbc = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASS);
+            self::$dbc->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        }
+    }
+
+    public function __get ($name)
+    {
+        if (array_key_exists($name, $this->attributes)) {
+            return $this->attributes[$name];
         }
 
         return null;
     }
+    
+    public function __set ($name, $value)
+    {
+        $this->attributes[$name] = $value;
+    }
+
+    public function save()
+    {
+        // @TODO: Ensure there are attributes before attempting to save
+
+        // @TODO: Perform the proper action - if the `id` is set, this is an update, if not it is a insert
+
+        // @TODO: Ensure that update is properly handled with the id key
+
+        // @TODO: After insert, add the id back to the attributes array so the object can properly reflect the id
+
+        // @TODO: You will need to iterate through all the attributes to build the prepared query
+
+        // @TODO: Use prepared statements to ensure data security
+    }
+
+    public static function find($id)
+    {
+        // Get connection to the database
+
+        // @TODO: Create select statement using prepared statements
+        
+        // @TODO: Store the resultset in a variable named $result
+        
+        // The following code will set the attributes on the calling object based on the result variable's contents
+
+        $instance = null;
+        if ($result)
+        {
+            $instance = new static;
+            $instance->attributes = $result;
+        }
+        return $instance;
+    }
+
+    public static function all()
+    {
+        // self::dbConnect();
+        // @TODO: Learning from the previous method, return all the matching records
+    }
 }
-
-$person1 = new Model();
-$person1->streetName = 'The n00b';
-$person1->hairColor = 'brown';
-$person1->eyeColor = 'green';
-$person1->height = 'average';
-$person1->language = 'English';
-
-
-echo 'street name: '  . $person1->streetName  . PHP_EOL . 
-    'hair: '          . $person1->hairColor   . PHP_EOL . 
-    'eyes: '          . $person1->eyeColor    . PHP_EOL . 
-    'height: '        . $person1->height      . PHP_EOL . 
-    'speaks: '        . $person1->language    . PHP_EOL .
-    '======================='                 . PHP_EOL; 
-
-$person2 = new Model();
-$person2->streetName = 'Bulldozer';
-$person2->hairColor = 'white';
-$person2->eyeColor = 'grey';
-$person2->height = 'short';
-$person2->language = 'Mute';
-
-
-echo 'street name: '  . $person2->streetName  . PHP_EOL . 
-    'hair: '          . $person2->hairColor   . PHP_EOL . 
-    'eyes: '          . $person2->eyeColor    . PHP_EOL . 
-    'height: '        . $person2->height      . PHP_EOL . 
-    'speaks: '        . $person2->language    . PHP_EOL .
-    '======================='                 . PHP_EOL; 
