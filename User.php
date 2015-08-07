@@ -60,20 +60,21 @@ class User extends Model
                     email = :email
                     cell = :cell
                     WHERE id = :id';
+
         $stmt = self::$dbc->prepare($query);
-        $stmt->bindValue(':last', $this->attributes['last_name'], PDO::PARAM_STR);
-        $stmt->bindValue(':first', $this->attributes['first_name'], PDO::PARAM_STR);
-        $stmt->bindValue(':user', $this->attributes['username'], PDO::PARAM_STR);
-        $stmt->bindValue(':email', $this->attributes['email'], PDO::PARAM_STR);
-        $stmt->bindValue(':cell', $this->attributes['cell'], PDO::PARAM_STR);
-        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+        $stmt->bindValue(':last',   $this->attributes['last_name'],     PDO::PARAM_STR);
+        $stmt->bindValue(':first',  $this->attributes['first_name'],    PDO::PARAM_STR);
+        $stmt->bindValue(':user',   $this->attributes['username'],      PDO::PARAM_STR);
+        $stmt->bindValue(':email',  $this->attributes['email'],         PDO::PARAM_STR);
+        $stmt->bindValue(':cell',   $this->attributes['cell'],          PDO::PARAM_STR);
+        $stmt->bindValue(':id',     $id, PDO::PARAM_INT);
         $stmt->execute();
     }
 
     public function insert()
     {
-        $query = 'INSERT INTO contacts (last_name, first_name, username, email, cell 
-            VALUES (:last, :first, :user, :email, :cell';
+        $query = 'INSERT INTO contacts (last_name, first_name, username, email, cell) 
+            VALUES (:last, :first, :user, :email, :cell)';
         $stmt = self::$dbc->prepare($query);
         $stmt->bindValue(':last', $this->attributes['last_name'], PDO::PARAM_STR);
         $stmt->bindValue(':first', $this->attributes['first_name'], PDO::PARAM_STR);
